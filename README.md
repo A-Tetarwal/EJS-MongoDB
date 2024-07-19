@@ -1,5 +1,3 @@
-Sure! Here is a README.md file for your repository named "EJS-MongoDB":
-
 # EJS-MongoDB
 
 A simple CRUD application using Express, EJS, and MongoDB.
