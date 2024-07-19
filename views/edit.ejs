@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJS and MongoDB</title>
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="w-full h-screen bg-zinc-900 text-white">
+    <a href="/read" class="text-blue-500">All Users</a>
+    <div class="w-full h-screen bg-zinc-900 text-white flex justify-center items-center">
+        <form class="flex flex-col" action="/edit/<%= user._id %>" method="post">
+            <input type="text" name="name"
+                class="bg-zinc-800 text-sm text-gray-400 mb-4 p-2 w-full border border-zinc-600 rounded-lg focus:bg-zinc-800 focus:outline-none focus:border-zinc-400"
+                id="name" placeholder="Name" value="<%= user.name %>">
+            <input type="text" name="image"
+                class="bg-zinc-800 text-sm text-gray-400 mb-4 p-2 w-full border border-zinc-600 rounded-lg focus:outline-none focus:border-zinc-400"
+                id="image" placeholder="image" value="<%= user.image %>">
+            <input type="email" name="email"
+                class="bg-zinc-800 text-sm text-gray-400 mb-4 p-2 w-full border border-zinc-600 rounded-lg focus:outline-none focus:border-zinc-400"
+                id="email" placeholder="Email" value="<%= user.email %>">
+            <button
+                class="w-full bg-green-500 text-sm text-white p-2 mt-1 rounded-lg hover:bg-green-600 transition duration-300"
+                type="submit">Update</button>
+        </form>
+    </div>
+    <script src="/javascripts/index.js"></script>
+</body>
+
+</html>
